@@ -1,0 +1,61 @@
+# #############################################################################
+#
+# Copyright (c) 2009 Zope Foundation and Contributors.
+# All Rights Reserved.
+#
+# This software is subject to the provisions of the Zope Public License,
+# Version 2.1 (ZPL).  A copy of the ZPL should accompany this distribution.
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED
+# WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+# WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
+# FOR A PARTICULAR PURPOSE.
+#
+# #############################################################################
+msgid ""
+msgstr ""
+"Project-Id-Version: Development/Unknown\n"
+"POT-Creation-Date: Fri Nov 14 00:00:22 2008\n"
+"PO-Revision-Date: 2008-11-02 12:04+0100\n"
+"Last-Translator: F. Kooman <fkooman@tuxed.net>\n"
+"Language-Team: Zope 3 Developers <zope3-dev@zope.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: zope/app/locales/extract.py\n"
+
+#: src/zojax/extensions/browser/breadcrumb.py:42
+#: src/zojax/extensions/browser/navigation.py:35
+#: src/zojax/extensions/browser/configure.zcml:53
+msgid "Extensions"
+msgstr "Uitbreidingen"
+
+#: src/zojax/extensions/configure.zcml:12
+msgid "Allow manage page extensions."
+msgstr "Toestaan paginauitbreidingen te beheren."
+
+#: src/zojax/extensions/configure.zcml:16
+msgid "Allow manage portal extensions."
+msgstr "Toestaan websiteuitbreidingen te beheren."
+
+#: src/zojax/extensions/configure.zcml:8
+msgid "Allow manage extensions."
+msgstr "Toestaan uitbreidingen te beheren."
+
+#: src/zojax/extensions/i18n.py:20
+msgid "Page structure"
+msgstr "Paginastructuur"
+
+#: src/zojax/extensions/i18n.py:21
+msgid "Portal extensions"
+msgstr "Websiteuitbreidingen"
+
+#: src/zojax/extensions/interfaces.py:81
+msgid "Extensions related to page structure."
+msgstr "Uitbreidingen gerelateerd aan de paginastructuur."
+
+#: src/zojax/extensions/interfaces.py:85
+msgid "Extension related to base portal functionality."
+msgstr "Uitbreidingen gerelateerd aan de websitefunctionaliteit."
+
+#~ msgid "View"
+#~ msgstr "Weergave"

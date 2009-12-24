@@ -1,0 +1,87 @@
+/* zrt-cssregistry: */
+
+@media all {
+
+  #z-extensions {
+    font-size: 100%;
+  }
+
+  #z-extensions .z-ext-title {
+    font-weight: bold;
+  }
+
+  #z-extensions h1 {
+    font-size: 130%;
+    font-weight: bold;
+  }
+
+  #z-extensions table.z-ext-layout {
+    width: 100%;
+  }
+  
+  #z-extensions table.z-ext-layout tr { 
+    vertical-align: top;
+  }
+
+  #z-extensions table.z-ext-layout td.z-ext-content { 
+    padding-left: 1.5em;
+  }
+  
+  #z-extensions .z-ext-nav-wrapper {
+    padding: 1em 1em 0.5em 1em;
+    background-color: evenRowBackgroundColor;
+  }
+
+  #z-extensions td.z-ext-nav-wrapper {
+    width: 200px;
+    padding: 1em 1em 0em 1em;
+  }
+
+  #z-extensions .z-ext-nav-wrapper h2 {
+    border-bottom: none;
+  }
+
+  #z-extensions td.z-ext-nav-wrapper h2 {
+    font-weight: normal;
+  }
+  
+  #z-extensions .z-ext-nav {
+    border: borderWidth borderStyle globalBorderColor;
+    border-bottom: none;
+    background: contentBackgroundColor;
+    font-size: fontSmallSize;
+  }
+  
+  #z-extensions .z-ext-nav a {
+    text-decoration: none;
+  }
+  
+  #z-extensions .z-ext-nav-item {
+    padding: 0.8em 0.4em 0.5em 0.4em;
+    border-bottom: borderWidth borderStyle globalBorderColor;
+  }
+  
+  #z-extensions .z-ext-nav-item-selected {
+    padding: 0.8em 0.4em 0.5em 0.4em;
+    background-color: globalBackgroundColor;
+    border-bottom: borderWidth borderStyle globalBorderColor;
+  }
+  
+  #z-extensions .z-ext-nav-item:hover {
+    background-color: globalBackgroundColor;
+  }
+  
+  #z-extensions .z-ext-nav-item li span {
+    border: 0;
+    border-bottom: 1px dotted discreetColor;
+  }
+
+  .z-ext-level1 {
+    padding-left: 0.8em;
+  }
+  
+  .z-ext-level2 {
+    padding-left: 1.6em;
+  }
+
+}

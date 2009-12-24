@@ -1,0 +1,3 @@
+# This file is necessary to make this directory a package.
+
+import i18n

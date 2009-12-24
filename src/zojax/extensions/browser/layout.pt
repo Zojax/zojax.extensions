@@ -1,0 +1,28 @@
+<h1 class="z-content-title" tal:content="layout/title" />
+<div class="z-page-description" tal:content="layout/description" />
+
+<div i18n:domain="zojax.extensions"
+     tal:define="extensionsView layout/extensionsView">
+  <div id="z-extensions">
+    <table class="z-ext-layout" tal:condition="not:extensionsView">
+      <tr tal:omit-tag="extensionsView">
+	<td class="z-ext-nav-wrapper"
+	    tal:define="nav nocall:layoutcontext/@@navigation"
+	    tal:content="structure python:nav(maincontext)"></td>
+
+	<td class="z-ext-content">
+	  <h1 tal:define="title layout/extension/__title__|layout/extension/title|nothing"
+	      tal:condition="title" tal:content="title"></h1>
+	  <div class="z-page-description"
+	       tal:content="layout/extension/__description__|layout/extension/description|nothing"></div>
+	  <tal:block tal:content="structure view/render"/>
+	</td>
+      </tr>
+    </table>
+    <div class="z-ext-layout" tal:condition="extensionsView">
+      <div class="z-ext-nav-wrapper"
+	  tal:define="nav nocall:layoutcontext/@@navigation"
+	  tal:content="structure python:nav(maincontext)"></div>
+    </div>
+  </div>
+</div>

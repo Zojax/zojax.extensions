@@ -1,0 +1,24 @@
+<tal:block tal:repeat="category data" 
+	   tal:define="data view/listExtensions;
+		       url context/@@absolute_url;
+		       selected view/selected;">
+
+  <tal:block tal:condition="python:category[2]">
+    <h2 tal:content="python:category[0]"></h2>
+
+    <div class="z-ext-nav">
+      <tal:block tal:repeat="extension python:category[2]">
+	<div class="z-ext-nav-item"
+	     tal:attributes="class python:extension[1].__name__ == selected 
+			     and 'z-ext-nav-item-selected' or 'z-ext-nav-item'">
+	  <div class="z-ext-level1" tal:define="ext python:extension[1]">
+	    <a tal:content="ext/__title__"
+	       tal:attributes="href string:$url/${ext/__name__}/"></a>
+	    <div tal:content="ext/__description__"></div>
+	  </div>
+	</div>
+      </tal:block>
+    </div>
+    <br />
+  </tal:block>
+</tal:block>

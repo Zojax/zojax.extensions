@@ -1,0 +1,70 @@
+<configure 
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:zojax="http://namespaces.zope.org/zojax"
+   xmlns:browser="http://namespaces.zope.org/browser"
+   i18n_domain="zojax.extensions">
+
+  <!-- ++extensions++ namespace -->
+ <adapter
+     name="extensions"
+     provides="zope.traversing.interfaces.ITraversable"
+     factory=".namespace.ExtensionsNamespace" />
+
+  <adapter
+     name="extensions"
+     for="..interfaces.IExtensible"
+     provides="zope.traversing.interfaces.ITraversable"
+     factory=".namespace.ExtensionsNamespace" />
+
+  <class class=".namespace.ExtensionsNamespace">
+    <allow
+       interface="zope.traversing.interfaces.ITraversable
+		  zope.publisher.interfaces.IPublishTraverse" />
+  </class>
+
+  <!-- layout -->
+  <zojax:layout
+     name="workspace"
+     layout="workspace"
+     for=".interfaces.IExtensionsView"
+     template="layout.pt"
+     class=".layout.Layout"
+     hidden="yes" />
+
+  <!-- IExtension view -->
+  <browser:defaultView
+     name="index.html"
+     for="..interfaces.IExtension" />
+
+  <browser:page
+     for="..interfaces.IExtension"
+     name="index.html"
+     class=".extension.EditExtension"
+     permission="zope.Public" />
+
+  <!-- IExtensionsList view -->
+  <zojax:pagelet
+     name="index.html"
+     for=".namespace.ExtensionsNamespace"
+     template="view.pt"
+     permission="zope.Public" />
+
+  <browser:page
+     for=".interfaces.IExtensionsView"
+     name="navigation"
+     template="navigation.pt"
+     class=".navigation.Navigation"
+     permission="zope.Public" />
+
+  <adapter factory=".breadcrumb.ExtensionBreadcrumb" />
+
+  <adapter factory=".breadcrumb.ExtensionsNamespaceBreadcrumb" />
+
+  <!-- styles -->
+  <zojax:resourceinclude
+     name="zojax-extensions.css"
+     library="zojax"
+     type="stylesheet"
+     file="styles.css" filetype="zrt" />
+
+</configure>
