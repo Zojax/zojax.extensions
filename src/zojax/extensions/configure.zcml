@@ -1,0 +1,47 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:i18n="http://namespaces.zope.org/i18n"
+   i18n_domain="zojax.extensions">
+
+  <permission
+     id="zojax.ManageExtension"
+     title="Allow manage extensions." />
+
+  <permission
+     id="zojax.ManagePageExtention"
+     title="Allow manage page extensions." />
+
+  <permission
+     id="zojax.ManagePortalExtention"
+     title="Allow manage portal extensions." />
+
+  <!-- extensions data storage -->
+  <adapter factory=".storage.Storage" />
+
+  <class class=".storage.Storage">
+    <require
+       permission="zope.Public"
+       interface=".interfaces.IExtensionsDataStorage" />
+  </class>
+
+  <!-- extenstion types -->
+  <interface
+     name="Page structure"
+     interface=".interfaces.IPageExtension"
+     type=".interfaces.IExtensionType" />
+
+  <interface
+     name="Portal extensions"
+     interface=".interfaces.IPortalExtension"
+     type=".interfaces.IExtensionType" />
+
+  <!-- helper class for ContentContainer in extension -->
+  <include file="container.zcml" />
+
+  <!-- browser views -->
+  <include package=".browser" />
+
+  <!-- translations -->
+  <i18n:registerTranslations directory="locales"/>
+
+</configure>

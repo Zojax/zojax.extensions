@@ -1,0 +1,19 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:zcml="http://namespaces.zope.org/zcml"
+   zcml:condition="installed zojax.content.type">
+
+  <class class=".container.ExtensionData">
+    <require
+       permission="zojax.ManageExtension"
+       interface="zope.app.container.interfaces.IContainer" />
+  </class>
+
+  <adapter
+     for=".container.ExtensionData"
+     provides="zojax.content.type.interfaces.IOrder"
+     factory="zojax.content.type.order.Reordable" />
+
+  <adapter factory=".container.ExtensionDataFactory" />
+
+</configure>

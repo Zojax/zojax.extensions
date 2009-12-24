@@ -1,0 +1,61 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:zojax="http://namespaces.zope.org/zojax"
+   i18n_domain="zojax">
+
+  <!-- skin -->
+  <interface
+     name="ExtensionSkin"
+     interface=".interfaces.ISkin"
+     type="zope.publisher.interfaces.browser.IBrowserSkinType" />
+
+  <!-- extenstion types -->
+  <interface
+     name="Extension type1"
+     interface=".interfaces.IExtensionType1"
+     type="..interfaces.IExtensionType" />
+
+  <interface
+     name="Extension type2"
+     interface=".interfaces.IExtensionType2"
+     type="..interfaces.IExtensionType" />
+
+  <interface
+     name="Extension type3"
+     interface=".interfaces.IExtensionType3"
+     type="..interfaces.IExtensionType" />
+
+  <!-- extensions -->
+  <zojax:extension
+     name="ext1"
+     title="Extension1"
+     description="Extension1 description."
+     schema="zojax.extensions.tests.interfaces.IExtension1"
+     type=".interfaces.IExtensionType1"
+     permission="zope.Public" />
+
+  <zojax:extension
+     name="ext2"
+     title="Extension2"
+     description="Extension2 description."
+     schema="zojax.extensions.tests.interfaces.IExtension2"
+     type=".interfaces.IExtensionType2"
+     permission="zope.View">
+    <require
+       permission="zope.View"
+       interface=".interfaces.IExtensionType2" />
+    <require
+       permission="zope.View"
+       set_schema=".interfaces.IExtensionType2" />
+  </zojax:extension>
+
+  <zojax:extension
+     name="ext3"
+     title="Extension3"
+     description="Extension3 description."
+     schema="zojax.extensions.tests.interfaces.IExtension3"
+     type=".interfaces.IExtensionType3"
+     layer="zope.publisher.interfaces.browser.IDefaultBrowserLayer"
+     permission="zope.Public" />
+
+</configure>
