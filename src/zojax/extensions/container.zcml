@@ -2,6 +2,10 @@
    xmlns="http://namespaces.zope.org/zope"
    xmlns:zcml="http://namespaces.zope.org/zcml"
    zcml:condition="installed zojax.content.type">
+   
+ <class class="zojax.content.type.item.Item">
+    <implements interface=".interfaces.IExtensible" />
+  </class>
 
   <class class=".container.ExtensionData">
     <require

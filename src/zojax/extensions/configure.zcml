@@ -40,10 +40,6 @@
 
   <!-- browser views -->
   <include package=".browser" />
-  
-  <class class="zojax.content.type.item.Item">
-    <implements interface=".interfaces.IExtensible" />
-  </class>
 
   <!-- translations -->
   <i18n:registerTranslations directory="locales"/>
