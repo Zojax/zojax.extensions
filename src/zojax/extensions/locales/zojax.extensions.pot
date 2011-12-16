@@ -1,0 +1,62 @@
+##############################################################################
+#
+# Copyright (c) 2003-2004 Zope Corporation and Contributors.
+# All Rights Reserved.
+#
+# This software is subject to the provisions of the Zope Public License,
+# Version 2.1 (ZPL).  A copy of the ZPL should accompany this distribution.
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED
+# WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+# WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
+# FOR A PARTICULAR PURPOSE.
+#
+##############################################################################
+msgid ""
+msgstr ""
+"Project-Id-Version: Development/Unknown\n"
+"POT-Creation-Date: Thu Dec  8 22:48:43 2011\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Zope 3 Developers <zope3-dev@zope.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: zope/app/locales/extract.py\n"
+
+#: src/zojax/extensions/browser/breadcrumb.py:42
+#: src/zojax/extensions/browser/navigation.py:35
+msgid "Extensions"
+msgstr ""
+
+#: src/zojax/extensions/browser/layout.py:25
+msgid "No title"
+msgstr ""
+
+#: src/zojax/extensions/configure.zcml:10
+msgid "Allow manage page extensions."
+msgstr ""
+
+#: src/zojax/extensions/configure.zcml:14
+msgid "Allow manage portal extensions."
+msgstr ""
+
+#: src/zojax/extensions/configure.zcml:6
+msgid "Allow manage extensions."
+msgstr ""
+
+#: src/zojax/extensions/i18n.py:20
+msgid "Page structure"
+msgstr ""
+
+#: src/zojax/extensions/i18n.py:21
+msgid "Portal extensions"
+msgstr ""
+
+#: src/zojax/extensions/interfaces.py:81
+msgid "Extensions related to page structure."
+msgstr ""
+
+#: src/zojax/extensions/interfaces.py:85
+msgid "Extension related to base portal functionality."
+msgstr ""
+
